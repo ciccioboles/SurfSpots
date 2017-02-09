@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65F3D0AE1E4C3328008BD66C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3D0AD1E4C3328008BD66C /* AppDelegate.swift */; };
-		65F3D0B01E4C3328008BD66C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3D0AF1E4C3328008BD66C /* ViewController.swift */; };
+		65F3D0B01E4C3328008BD66C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3D0AF1E4C3328008BD66C /* MainVC.swift */; };
 		65F3D0B31E4C3328008BD66C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F3D0B11E4C3328008BD66C /* Main.storyboard */; };
 		65F3D0B61E4C3328008BD66C /* Surf_Spots.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65F3D0B41E4C3328008BD66C /* Surf_Spots.xcdatamodeld */; };
 		65F3D0B81E4C3328008BD66C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F3D0B71E4C3328008BD66C /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		65F3D0AA1E4C3328008BD66C /* Surf Spots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surf Spots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F3D0AD1E4C3328008BD66C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65F3D0AF1E4C3328008BD66C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65F3D0AF1E4C3328008BD66C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		65F3D0B21E4C3328008BD66C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65F3D0B51E4C3328008BD66C /* Surf_Spots.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surf_Spots.xcdatamodel; sourceTree = "<group>"; };
 		65F3D0B71E4C3328008BD66C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,11 +56,11 @@
 		65F3D0AC1E4C3328008BD66C /* Surf Spots */ = {
 			isa = PBXGroup;
 			children = (
-				65F3D0AD1E4C3328008BD66C /* AppDelegate.swift */,
-				65F3D0AF1E4C3328008BD66C /* ViewController.swift */,
+				65F3D0AF1E4C3328008BD66C /* MainVC.swift */,
 				65F3D0B11E4C3328008BD66C /* Main.storyboard */,
 				65F3D0B71E4C3328008BD66C /* Assets.xcassets */,
 				65F3D0B91E4C3328008BD66C /* LaunchScreen.storyboard */,
+				65F3D0AD1E4C3328008BD66C /* AppDelegate.swift */,
 				65F3D0BC1E4C3328008BD66C /* Info.plist */,
 				65F3D0B41E4C3328008BD66C /* Surf_Spots.xcdatamodeld */,
 			);
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F3D0B61E4C3328008BD66C /* Surf_Spots.xcdatamodeld in Sources */,
-				65F3D0B01E4C3328008BD66C /* ViewController.swift in Sources */,
+				65F3D0B01E4C3328008BD66C /* MainVC.swift in Sources */,
 				65F3D0AE1E4C3328008BD66C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
