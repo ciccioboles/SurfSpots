@@ -13,12 +13,25 @@ class SpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var spotImageView: UIImageView!
     
+    @IBOutlet weak var addUpdateButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var theImagePicker = UIImagePickerController()
+    var spot : Spot? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         theImagePicker.delegate = self
+        
+        if spot != nil {
+                spotImageView.image = UIImage(data: spot?.image as! Data)
+            titleTextField.text = spot?.spot
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
     
     }//
 
@@ -40,22 +53,41 @@ class SpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func cameraTapped(_ sender: Any) {
         
+        theImagePicker.sourceType = .camera
+        
+        present(theImagePicker, animated: true, completion: nil)
+        
     }
 
     @IBAction func addTapped(_ sender: Any) {
         
-        let theContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let theSpot = Spot(context: theContext)
-        theSpot.spot = titleTextField.text
-        theSpot.image = UIImagePNGRepresentation(spotImageView.image!) as NSData?
+        if spot != nil {
+            spot!.spot = titleTextField.text
+            spot!.image = UIImagePNGRepresentation(spotImageView.image!) as NSData?
+        } else {
+            let theContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let theSpot = Spot(context: theContext)
+            theSpot.spot = titleTextField.text
+            theSpot.image = UIImagePNGRepresentation(spotImageView.image!) as NSData?
+        }
+        
+        
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        navigationController?.popViewController(animated: true)
+        navigationController!.popViewController(animated: true)
         
     }
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        let theContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        theContext.delete(spot!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+    }
     
     
     

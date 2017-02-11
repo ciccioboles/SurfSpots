@@ -48,6 +48,16 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return theCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let theSpot = theSpots[indexPath.row]
+        performSegue(withIdentifier: "spotSegue", sender: theSpot)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! SpotVC
+        nextVC.spot = sender as? Spot
+    }
+    
     
 }//
 

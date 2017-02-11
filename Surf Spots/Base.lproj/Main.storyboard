@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="gbN-x0-aRC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="suT-eh-9Y3">
                             <connections>
-                                <segue destination="Xi5-Ub-DuM" kind="show" id="SfZ-Eo-L5g"/>
+                                <segue destination="Xi5-Ub-DuM" kind="show" identifier="spotSegue" id="SfZ-Eo-L5g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,15 +82,25 @@
                                     <action selector="addTapped:" destination="Xi5-Ub-DuM" eventType="touchUpInside" id="apW-pz-Y31"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCf-o6-OfK">
+                                <rect key="frame" x="165" y="469" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Xi5-Ub-DuM" eventType="touchUpInside" id="jVM-yV-E1Y"/>
+                                    <action selector="deleteTapped:" destination="Xi5-Ub-DuM" eventType="touchUpInside" id="Je7-iP-Plv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KCf-o6-OfK" firstAttribute="centerX" secondItem="SDw-g7-QTi" secondAttribute="centerX" id="2Fd-Qt-SaL"/>
                             <constraint firstItem="gI0-iB-cMJ" firstAttribute="centerX" secondItem="SDw-g7-QTi" secondAttribute="centerX" id="8sW-VM-v9j"/>
                             <constraint firstItem="1f8-ET-v9i" firstAttribute="width" secondItem="gI0-iB-cMJ" secondAttribute="width" id="O1Z-Wy-YHo"/>
                             <constraint firstItem="1f8-ET-v9i" firstAttribute="centerX" secondItem="SDw-g7-QTi" secondAttribute="centerX" id="UlY-sh-72f"/>
                             <constraint firstItem="1f8-ET-v9i" firstAttribute="top" secondItem="gI0-iB-cMJ" secondAttribute="bottom" constant="10" id="fqY-w1-u61"/>
                             <constraint firstItem="gI0-iB-cMJ" firstAttribute="top" secondItem="j0S-fh-yWC" secondAttribute="bottom" constant="10" id="k2c-k0-p38"/>
                             <constraint firstItem="frQ-1k-lMd" firstAttribute="centerX" secondItem="SDw-g7-QTi" secondAttribute="centerX" id="pa4-DK-XGB"/>
+                            <constraint firstItem="KCf-o6-OfK" firstAttribute="top" secondItem="frQ-1k-lMd" secondAttribute="bottom" constant="5" id="pfe-4m-9RM"/>
                             <constraint firstItem="frQ-1k-lMd" firstAttribute="top" secondItem="1f8-ET-v9i" secondAttribute="bottom" constant="20" id="uLS-Bo-gEw"/>
                         </constraints>
                     </view>
@@ -109,13 +119,15 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="frQ-1k-lMd" id="3Jq-Bg-qHn"/>
+                        <outlet property="deleteButton" destination="KCf-o6-OfK" id="BJN-tM-KYZ"/>
                         <outlet property="spotImageView" destination="gI0-iB-cMJ" id="PN8-av-DgH"/>
                         <outlet property="titleTextField" destination="1f8-ET-v9i" id="Db5-Gx-xez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFC-QF-JVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="36"/>
+            <point key="canvasLocation" x="1645.5999999999999" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cf9-13-Sa4">
